@@ -6,6 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+
   header {
     font-size: $shoppy-body-text;
     width: 100%;
@@ -115,6 +116,148 @@ body {
               font-size: 20px;
               margin-left: 15px;
             }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    margin-top: 3rem;
+
+    .jumbotron {
+      @include jd-container;
+
+      .jumbotron-container {
+        width: 100%;
+        background-color: #000;
+
+        .swiper {
+          width: 100%;
+          height: 100%;
+          color: $shoppy-off-white;
+
+          .swiper-wrapper {
+            margin: auto;
+            width: 100%;
+            padding-inline: 3rem;
+            padding-block: 3rem;
+          }
+
+          .swiper-slide {
+            width: 100%;
+            @include jd-flex-norm;
+
+            gap: 3rem;
+
+            .swiper-slide-left,
+            .swiper-slide-right {
+              flex: 1;
+              flex-basis: 50%;
+            }
+
+            .swiper-slide-left {
+              .iphone-series {
+                @include jd-flex-norm;
+                justify-content: start;
+                gap: 1.5rem;
+              }
+
+              h1 {
+                font-size: $shoppy-heading;
+                font-family: $shoppy-heading-family;
+                font-weight: 500;
+              }
+
+              .shopnow {
+                span {
+                  text-decoration: underline;
+                  text-underline-offset: 8px;
+                }
+
+                @include jd-flex-norm;
+                justify-content: start;
+                gap: 1rem;
+
+                i {
+                  transform: rotate(180deg);
+                  font-size: 25px;
+                }
+              }
+            }
+
+            .swiper-slide-right img {
+              width: 100%;
+            }
+          }
+
+          .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            color: #808080;
+            opacity: 1;
+            background: #808080;
+          }
+
+          .swiper-pagination-bullet-active {
+            color: #fff;
+            background: $shoppy-teal-blue;
+            outline: 1px solid $shoppy-off-white;
+          }
+        }
+      }
+    }
+
+    .sponsors {
+      height: max-content;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+
+      div {
+        @include jd-flex-norm;
+        gap: 5rem;
+
+        div {
+          width: 280.63px;
+          height: 111.57px;
+          background-color: $shoppy-white;
+          border-radius: 15px;
+          filter: drop-shadow(0 0 0.75rem #808080);
+
+          img {
+            object-fit: contain;
+          }
+        }
+      }
+    }
+
+    .explore {
+      @include jd-container;
+
+      .explore-heading {
+        @include jd-flex-sb;
+
+        h1 {
+        }
+        p {
+          color: $shoppy-blue;
+        }
+      }
+
+      .explore-content {
+        @include jd-flex-norm;
+        flex-direction: column;
+
+        .top,
+        .bottom {
+          @include jd-flex-norm;
+          width: 100%;
+          .explore-content-img {
+            background-color: #808080;
           }
         }
       }
